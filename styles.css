@@ -287,12 +287,16 @@ h2 {
 }
 
 .gateways-table tr.no-background td { 
-    background-color: transparent; 
+    background-color: transparent;
+
 }
 
  .gateways-table tr:first-child img {
     max-width: 100%;  
     height: auto;     
-    margin-bottom: 10px;  /* Example spacing */
  }
  
+ .gateways-table td.sku-code {
+    font-size: 10px;
+    padding: 0px;
+ }
