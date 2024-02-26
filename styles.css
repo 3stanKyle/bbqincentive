@@ -87,26 +87,26 @@ margin-right: 8px;
     margin: 0 8px;
     letter-spacing: 0.200em;
     font-size: 12px;
-    height: 100%;           /* Make the text container cover the full section height */
+    height: 100%;           
 }
 
 .prizes {
-    padding: 16px 0;         /* Add padding within the section */
-    position: relative;      /* Allows positioning adjustments */
-    top: -56px;              /* Raise the section visually */
+    padding: 16px 0;         
+    position: relative;      
+    top: -56px;              
     max-width: 955px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line when space runs out */
-    justify-content: center; /* Center the images horizontally */
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .prize {
     display: inline-block;   
-    margin: 8px 8px;          /* Space between images */
+    margin: 8px 8px;          
     max-width: calc(33.333% - 16px);
     height: auto;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Apply shadow */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
 }
 
 @media (max-width: 955px) {
@@ -216,6 +216,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .product-image-container img {
@@ -224,6 +225,36 @@ h2 {
     object-fit: scale-down; 
 }
 
+.points-label {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    color: white;
+    width: 70px; 
+    height: 70px; 
+    clip-path: polygon(0 0, 100% 0, 0 100%); 
+}
+
+.points-label.color-5 { background-color: #ff0000; }
+.points-label.color-3 { background-color: #7000cc; } 
+.points-label.color-2 { background-color: #0079b5; } 
+.points-label.color-1 { background-color: #008f48; } 
+
+.points-text {
+    transform: rotate(-45deg);
+    font-size: 8px;
+    letter-spacing: 0.100em;
+    font-weight: 600;
+    position: relative;    
+    left: -16px;            
+    top: 0px;              
+}
+
+.points-number {
+    font-size: 24px;  
+    font-weight: bold; 
+}
+  
 .dm-image-container {
     max-width: 300px;
     width: 100%; 
@@ -233,6 +264,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .dm-image-container img {
@@ -252,8 +284,8 @@ h2 {
     font-weight: 700;
     font-size: small;
     text-decoration: none;
-    display: inline-block;  /* Or display: block; if needed */
-    white-space: nowrap; /* Consider removing if you want wrapping */
+    display: inline-block;  
+    white-space: nowrap; 
 }
 
 .gateways-table {
@@ -306,3 +338,11 @@ h2 {
     font-size: 10px;
     padding: 0px;
  }
+
+ @keyframes blink { 
+    50% { opacity: 0; } 
+  }
+  
+  .points-label.blink { 
+    animation: blink 1s linear infinite alternate;     
+  }
